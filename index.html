@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#050608">
+  <meta name="description" content="NOIR — городской барбершоп. Стрижки, бритьё и запись онлайн.">
+  <title>NOIR — Barber Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Rubik+Dirt&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="cursor-dot" id="cursorDot"></div><div class="cursor-ring" id="cursorRing"></div>
+  <div class="noise"></div><div class="scanlines"></div>
+  <div class="page-progress" id="pageProgress"></div>
+
+  <header class="site-header">
+    <a class="brand magnetic" href="#top" aria-label="На главную">
+      <span class="brand-mark" data-logo-mark>N</span><span class="brand-logo" data-logo><span data-bind="brand">NOIR</span></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Основная навигация">
+      <a href="#services">Услуги</a><a href="#lookbook">Lookbook</a><a href="#space">Пространство</a><a href="#about">О нас</a>
+    </nav>
+    <a class="header-cta magnetic" href="#booking">Записаться <span>↗</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Открыть меню">☰</button>
+  </header>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services">Услуги <span>01</span></a><a href="#lookbook">Lookbook <span>02</span></a><a href="#space">Пространство <span>03</span></a><a href="#about">О нас <span>04</span></a><a href="#booking">Записаться <span>05</span></a>
+  </div>
+
+  <main id="top">
+    <section class="hero section-pad" data-section="hero">
+      <div class="hero-bg-word">BARBER</div>
+      <div class="hero-copy reveal">
+        <div class="hero-topline"><p class="eyebrow">BARBER SHOP / 2026</p><span class="hero-coord">50° 27' / 30° 31'</span></div>
+        <h1><span>YOUR</span><strong>STYLE</strong><em>YOUR RULES.</em></h1>
+        <div class="hero-sticker">NO<br>BAD<br>HAIR</div>
+        <p class="hero-text" data-bind="heroText">Не просто стрижка. Чёткая форма, чистая линия и городской характер.</p>
+        <div class="hero-actions"><a class="btn btn-light magnetic" href="#booking">Выбрать время <span>↗</span></a><a class="text-link" href="#services">Смотреть услуги ↓</a></div>
+      </div>
+      <div class="hero-art reveal reveal-delay">
+        <div class="chrome-orbit"></div><div class="chrome-orbit orbit-two"></div>
+        <div class="hero-frame"><img src="assets/portrait-01.png" alt="Модель с современной стрижкой" class="hero-photo"><span class="frame-tape tape-one">CUT / 001</span><span class="frame-tape tape-two">NOIR</span></div>
+        <div class="stamp">CUT<br><b>01</b></div><div class="hero-side">FORM / DETAIL / ATTITUDE</div>
+        <div class="floating-tag tag-blue">FADE<br>CLUB</div><div class="floating-tag tag-pink">EST.<br>2026</div>
+      </div>
+      <div class="ticker"><span>NOIR BARBER</span><span>FORM YOUR STYLE</span><span>NOIR BARBER</span><span>RAW / CLEAN / SHARP</span><span>NOIR BARBER</span></div>
+    </section>
+
+    <section class="intro section-pad" id="about">
+      <div class="section-kicker reveal">01 / THE CONCEPT <b>✦</b></div>
+      <div class="intro-grid">
+        <div class="intro-title reveal"><span class="scribble">NO RULES</span><h2>Городской<br><i>ритуал.</i></h2><div class="arrow-cross">↘</div></div>
+        <div class="reveal reveal-delay"><p class="big-copy">Мы собираем образ так же внимательно, как дизайнер собирает постер: форма, фактура, контраст, детали.</p><p class="muted">Минимализм встречается с chrome-эстетикой, яркой графикой и уличной энергией. Здесь можно прийти за привычным fade, а уйти с новой версией себя.</p><div class="mini-specs"><span>01 / FORM</span><span>02 / TEXTURE</span><span>03 / ATTITUDE</span></div></div>
+      </div>
+    </section>
+
+    <section class="services section-pad" id="services">
+      <div class="section-kicker reveal">02 / MENU <b>✦</b></div>
+      <div class="section-title-row reveal"><div><span class="outline-word">CHOOSE</span><h2>Услуги<span>.</span></h2></div><p>Выбирай форму.<br>Остальное сделаем мы.</p></div>
+      <div class="service-grid" id="serviceGrid"></div>
+      <div class="services-bottom reveal"><span>ALL CUTS / ALL ATTITUDE</span><a class="pill-link magnetic" href="#booking">Записаться ↗</a></div>
+    </section>
+
+    <section class="feature section-pad" id="space">
+      <div class="feature-image reveal"><img src="assets/interior.png" alt="Интерьер барбершопа"><span class="vertical-label">THE SPACE / 003</span><span class="image-badge">RAW<br>SPACE</span></div>
+      <div class="feature-copy reveal reveal-delay"><div class="section-kicker">03 / THE SPACE <b>✦</b></div><h2>BLACK.<br><span>CHROME.</span><br><i>RAW.</i></h2><p data-bind="spaceText">Тёмное пространство, металл, зеркала и свет, который подчёркивает форму. Никакой случайности — только характер.</p><div class="space-tags"><span>METAL</span><span>LIGHT</span><span>CONCRETE</span></div><a class="circle-link magnetic" href="#booking">BOOK<br>NOW ↗</a></div>
+    </section>
+
+    <section class="lookbook section-pad" id="lookbook">
+      <div class="section-kicker reveal">04 / LOOKBOOK <b>✦</b></div>
+      <div class="section-title-row reveal"><div><span class="outline-word pink">LOOK</span><h2>Fresh <i>cuts.</i></h2></div><p>Референсы для разговора с мастером.<br>Твой образ — твои правила.</p></div>
+      <div class="look-grid">
+        <figure class="look look-a reveal magnetic-card"><div class="look-number">01</div><img src="assets/hair-01.jpg" alt="Fade haircut"><figcaption><b>LOW FADE</b><span>01 / CLEAN</span></figcaption></figure>
+        <figure class="look look-b reveal reveal-delay magnetic-card"><div class="look-number">02</div><img src="assets/hair-02.jpg" alt="Textured haircut"><figcaption><b>TEXTURED CROP</b><span>02 / ROUGH</span></figcaption></figure>
+        <figure class="look look-c reveal magnetic-card"><div class="look-number">03</div><img src="assets/portrait-02.jpg" alt="Modern haircut"><figcaption><b>MODERN FORM</b><span>03 / SHARP</span></figcaption></figure>
+      </div>
+      <div class="look-marquee"><span>STYLE / STYLE / STYLE / STYLE / STYLE / STYLE /</span></div>
+    </section>
+
+    <section class="manifesto section-pad">
+      <div class="manifesto-word">NOIR</div><div class="manifesto-scribble">MAKE<br>IT<br>LOUD ↗</div>
+      <div class="manifesto-card reveal"><span>STYLE IS A DECISION.</span><strong>MAKE IT<br><i>LOUD.</i></strong><small>— NOIR BARBER CLUB</small></div>
+    </section>
+
+    <section class="booking section-pad" id="booking">
+      <div class="booking-head reveal"><div class="section-kicker">05 / BOOKING <b>✦</b></div><h2>Забронируй<br><i>свой слот.</i></h2><p>Выбери услугу, дату и удобное время. Заявка появится в панели владельца.</p><div class="booking-note"><span>FAST</span><span>ONLINE</span><span>NO CALLS</span></div></div>
+      <form id="bookingForm" class="booking-form reveal reveal-delay">
+        <div class="field"><label>01 / Имя</label><input name="name" required placeholder="Как к тебе обращаться?"></div>
+        <div class="field"><label>02 / Телефон</label><input name="phone" required type="tel" placeholder="+7 900 000 00 00"></div>
+        <div class="field"><label>03 / Услуга</label><select name="service" id="bookingService" required></select></div>
+        <div class="field"><label>04 / Дата</label><input name="date" id="bookingDate" required type="date"></div>
+        <div class="field"><label>05 / Время</label><select name="time" required><option value="">Выбрать время</option><option>10:00</option><option>11:30</option><option>13:00</option><option>14:30</option><option>16:00</option><option>17:30</option><option>19:00</option><option>20:30</option></select></div>
+        <div class="field"><label>06 / Комментарий</label><input name="comment" placeholder="Например: хочу low fade"></div>
+        <button class="submit-btn magnetic" type="submit">Отправить заявку <span>↗</span></button>
+        <p class="form-note">Нажимая кнопку, ты соглашаешься на обработку заявки. Никаких звонков-роботов — только запись.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer section-pad"><div><div class="brand"><span class="brand-mark" data-logo-mark>N</span><span class="brand-logo" data-logo><span data-bind="brand">NOIR</span></span></div><p data-bind="footerText">Barber shop for people who care about the details.</p></div><div class="footer-links"><a href="#services">Услуги</a><a href="#lookbook">Lookbook</a><a href="#booking">Запись</a><a href="admin.html">Панель владельца</a></div><div class="footer-meta"><span data-bind="address">ул. Стильная, 14</span><span data-bind="phone">+7 900 000 00 00</span><span>© 2026</span></div></footer>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
